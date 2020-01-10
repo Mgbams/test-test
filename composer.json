@@ -1,0 +1,17 @@
+{
+    "name": "newproject/weather",
+    "authors": [
+        {
+            "name": "Niko",
+            "email": "nico@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "description": "project avec UML",
+    "autoload": {
+        "psr-4": {
+            "Weatherproject\\": "src/"
+        }
+    }
+}
