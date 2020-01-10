@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+<form action="" method="POST">
+    <h1>Prévisions météorologiques</h1>
+    <div>
+        <div class="ville">
+            <label class="villetext" for="city">Ville:</label>
+            <input type="city" id="city" name="city" placeholder="Entrez la ville pour rechercher">
+        </div>
+        <div class="search"><input type="submit" value="Searcher"></div>
+    </div>
+</form>
+
+<div class="card_default" style="width: 100%">
+    <img src="src/public/images/default_img.jpg" class="card-img-top default_output_img" alt="sunny weather image">
+    <div class="flex_location">
+        <div class="rond_location_img"><img src="src/public/images/location.jpg" alt=""></div>
+        <div class="blanc"><?php echo $defaultData["name"] . "," . $defaultData['sys']['country']; ?></div>
+        <div class="blanc"><?php echo date("G:i A"); ?></div>
+    </div>
+    <div class="min_max_temp">
+        <div>
+            <p class="max_temp"><?php echo $defaultData["main"]["temp_max"]; ?></p>
+            <p class="min_temp"><?php echo $defaultData["main"]["temp_min"]; ?></p>
+        </div>
+        <div>
+            <img class="temperature_img" src="src/public/images/temperature2.jpg" alt="">
+        </div>
+    </div>
+    <div class="card_body_default">
+        <div class="card_body_default1">
+            <div class="default1_values">
+                <div><span class="temps"><?php echo $defaultData["main"]["temp"]; ?></span><span class="degree">°</span>
+                </div>
+                <div class="time"><?php echo date("D j M"); ?></div>
+            </div>
+            <div>
+                <div><?php echo $image_default; ?></div>
+                <div class="description"><?php echo $defaultData["weather"][0]["description"]; ?></div>
+            </div>
+        </div>
+
+        <div class="card_body_default2">
+            <div class="humidity">
+                <p>Humidité</p>
+                <p><img class="weather_png_aside" src="src/public/images/humidity.jpg" alt="humidity jpg image"></p>
+                <p><?php echo $defaultData["main"]["humidity"]; ?></p>
+            </div>
+
+            <div class="pressure">
+                <p>Pression</p>
+                <p><img class="weather_png_aside" src="src/public/images/pressure.jpg" alt="pressure jpg image"></p>
+                <p><?php echo  $defaultData["main"]["pressure"] . "hpa"; ?></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
